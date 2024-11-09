@@ -1,0 +1,115 @@
+/* 전체 페이지 설정 */
+.letter-introducing-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    background: linear-gradient(135deg, #f3f4f6, #e1e9ff); /* 배경 그라데이션 */
+    position: relative;
+}
+
+/* 배경 원 */
+.background-circle {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    background-color: rgba(58, 91, 255, 0.6); /* 파란색 원 색상 */
+    border-radius: 50%;
+    filter: blur(300px); /* 흐림 효과 */
+    top: 50%; /* 수직 가운데 정렬 */
+    left: 50%; /* 수평 가운데 정렬 */
+    transform: translate(-50%, -50%);
+    z-index: 0; /* 배경 원이 뒤에 오도록 설정 */
+}
+
+/* 헤더 스타일 */
+.header {
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    margin-bottom: 10px;
+    z-index: 1; /* 헤더가 배경 원 위에 위치하도록 설정 */
+}
+
+.header h1 {
+    font-size: 25px;
+    font-weight: bold;
+    color: #555;
+    cursor: pointer;
+}
+
+/* 페이지 제목 스타일 */
+.page-title {
+    font-family: 'Inter', sans-serif;
+    color: rgba(0, 0, 0, 0.5); /* 흐린 검은색 */
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 50px; /* 헤더와 제목 사이에 여백 추가 */
+    margin-bottom: 30px; /* 페이지 타이틀과 콘텐츠 영역 간 여백 */
+    z-index: 1; /* 배경 원 위에 위치 */
+}
+
+/* 컨텐츠 영역 */
+.right-panel {
+    width: 100%;
+    max-width: 900px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    text-align: center;
+    z-index: 1; /* 컨텐츠가 배경 원 위에 위치하도록 설정 */
+}
+
+/* 편지 카드 목록 */
+.letters-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3개씩 나열 */
+    gap: 20px;
+    max-height: 600px; /* 목록의 최대 높이 */
+    overflow-y: auto; /* 내용이 넘치면 스크롤 표시 */
+    padding-right: 20px; /* 오른쪽에 여백을 주어 스크롤이 잘 보이도록 함 */
+}
+
+/* 각 편지 카드 스타일 */
+.letter-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: left;
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 200px; /* 카드의 고정 높이 */
+    z-index: 1; /* 카드가 배경 원 위에 위치하도록 설정 */
+}
+
+
+.letter-header h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #4a75f2;
+}
+
+.letter-info {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    color: #333;
+}
+
+.letter-info p {
+    margin: 0;
+    text-align: center;
+}
+
+.letter-footer {
+    text-align: right;
+    font-size: 14px;
+    color: #888;
+    font-weight: 500;
+}

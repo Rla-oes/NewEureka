@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main-page body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    background-color: #FFFFFF;
+    background-repeat: no-repeat;
+}
+
+.main-content {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1; /* 원들보다 위로 오도록 */
+    margin-top: 300px; /* 헤더 크기만큼 공간을 확보 */
+}
+
+.gradient-circle {
+    position: absolute;
+    border-radius: 50%;
+    background: #3A5BFF;
+    width: 600px;
+    height: 600px;
+    z-index: -1; /* main-content 뒤에 위치 */
+    filter: blur(300px);
+}
+
+/* 왼쪽 위 원 */
+.gradient-circle:first-child {
+    top: -250px;
+    left: -250px;
+}
+
+/* 오른쪽 아래 원 */
+.gradient-circle:nth-child(2) {
+    bottom: -250px;
+    right: -250px;
+}
+
+/* 헤더 스타일 */
+.header {
+    width: 100%;
+    background: rgba(217, 217, 217, 0.44);
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+/* 헤더 텍스트 */
+.header h1 {
+    font-size: 25px;
+    font-weight: bold;
+    color: #555;
+}
+
+.main-content h2 {
+    width: 702px;
+    height: 178px;
+    flex-shrink: 0;
+    color: rgba(0, 0, 0, 0.59);
+    text-align: center;
+    font-family: Inter;
+    font-size: 60px;
+    font-weight: 900;
+    line-height: normal;
+}
+
+/* Button Group Styling */
+.button-group {
+    display: flex;
+    justify-content: center;
+}
+
+.button-group button {
+    border-radius: 100px;
+    background: rgba(58, 91, 255, 0.95);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    color: white;
+    border: none;
+    padding: 12px 40px;  /* Adjusted padding to prevent text wrapping */
+    font-size: 35px;
+    margin: 0 50px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-weight: bold;
+    height: 80px;
+    width: 350px;
+    white-space: nowrap; /* Prevent text wrapping */
+}
+
+/* Button Hover State */
+.button-group button:hover {
+    background-color: #365dd6;
+}

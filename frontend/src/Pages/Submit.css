@@ -1,0 +1,105 @@
+/* Rollingpaper.css */
+.rollingpaper-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #f3f4f6, #e1e9ff); /* 배경 그라데이션 */
+    position: relative;
+    flex-direction: column; /* 세로 방향으로 배치 */
+    padding-top: 80px; /* 헤더 아래 간격 */
+}
+
+.background-circle {
+    position: absolute;
+    width: 450px;
+    height: 450px;
+    background-color: rgba(58, 91, 255, 0.82); /* 원 색상 */
+    border-radius: 50%;
+    filter: blur(350px);
+    top: 50%; /* 가운데 정렬 */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+}
+
+h2 {
+    font-family: 'Inter', sans-serif;
+    color: rgba(0, 0, 0, 0.50);
+    text-align: center;
+    font-size: 30px;
+    font-weight: 900;
+    line-height: normal;
+    z-index: 1; /* 제목이 배경 원 위에 위치하도록 */
+    margin-top: 10px; /* 헤더와의 간격을 설정 */
+    margin-bottom: 40px; /* 폼과의 간격 */
+}
+
+/* 폼 컨테이너 */
+.rollingpaper-form {
+    background-color: transparent; /* 배경색을 투명으로 설정 */
+    border: 2px solid lightgrey; /* 테두리만 설정, 원하는 색상으로 조정 가능 */
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    max-width: 450px;
+    width: 100%;
+    z-index: 1; /* 폼이 배경 원 위에 위치하도록 */
+}
+
+
+/* 폼 그룹 */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* 입력 필드와 텍스트 영역 스타일 */
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 25px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    background-color: white;
+    outline: none;
+    transition: border-color 0.3s;
+    margin-bottom: 20px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    text-align: left;
+    cursor: text;
+    position: relative;
+}
+
+textarea {
+    min-height: 150px; /* 텍스트 영역 최소 높이 설정 */
+    resize: vertical;
+}
+
+input:focus, textarea:focus {
+    border-color: #6b8cff; /* 포커스 시 테두리 색상 */
+}
+
+/* 버튼 스타일 */
+button {
+    padding: 12px;
+    background-color: #4a75f2;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #365dd6; /* Hover 시 색상 변경 */
+}
+
+button:focus {
+    outline: none;
+}
