@@ -103,3 +103,28 @@ button:hover {
 button:focus {
     outline: none;
 }
+
+.recommendation-button {
+    padding: 10px 20px;
+    background-color: #4a75f2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.recommendation {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.recommended-text {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 5px;
+    font-size: 16px;
+}
